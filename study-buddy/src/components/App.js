@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
+import {BrowserRouter, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
-// import * as actions from '../actions';
-import './App.css';
+import * as actions from '../actions';
+// import './App.css';
 
 import Nav from './nav';
 import Home from './home';
-import MapPage from './mapPage';
-import MeetupPage from './meetupPage';
-import Footer from './footer';
+
+const MapPage = () => <h2>MapPage</h2>
+const MeetupPage = () => <h2>MeetupPage</h2>
+// import MapPage from './mapPage';
+// import MeetupPage from './meetupPage';
 
 class App extends Component {
   componentDidMount() {
@@ -22,8 +24,8 @@ class App extends Component {
           <div>
             <Nav />
             <Route exact path="/" Component={Home} />
-            <Route exact path="/map" Component={mapPage} />
-            <Route exact path="/meetup" Component={meetupPage} />
+            <Route exact path="/map" Component={MapPage} />
+            <Route exact path="/meetup" Component={MeetupPage} />
           </div>
         </BrowserRouter>
       </div>

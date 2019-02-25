@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import './nav.css';
+// import './nav.css';
 
 class Nav extends Component {
   renderContent() {

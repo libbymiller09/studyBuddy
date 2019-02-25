@@ -1,13 +1,16 @@
 import React from 'react';
 
-import Nav from './nav';
-import HowTo from './how-to';
-import SignUpForm from './sign-up-form';
-import Footer from './footer';
-
-export default function Home(props) {
-  return (
+const Home = () => {
+  return ( 
     <div>
-      </div>
+      <h1>
+        Study Buddy Landing Page
+      </h1>
+      <p>
+        Connect with new peers to study with!
+      </p>
+    </div>
   );
-}
+};
+
+export default Home;

@@ -1,10 +1,10 @@
-import React from 'react';
+// import React from 'react';
 
-import ModalInfo from './modal-info';
+// import ModalInfo from './modal-info';
 
-export default function Modal(props) {
-  return (
-    <div>
-      </div>
-  );
-}
+// export default function Modal(props) {
+//   return (
+//     <div>
+//       </div>
+//   );
+// }
