@@ -1,16 +1,13 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Switch, Link, Route} from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
-// import './App.css';
 
-import Nav from './nav';
 import Home from './home';
-
-const MapPage = () => <h2>MapPage</h2>
-const MeetupPage = () => <h2>MeetupPage</h2>
-// import MapPage from './mapPage';
-// import MeetupPage from './meetupPage';
+import MapPage from './MapPage/mapPage';
+import MeetupPage from './MeetupPage/meetupPage';
+import Nav from './nav';
+// import './App.css';
 
 class App extends Component {
   componentDidMount() {
@@ -19,16 +16,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="appContainer">
-        <BrowserRouter>
-          <div>
-            <Nav />
-            <Route exact path="/" Component={Home} />
-            <Route exact path="/map" Component={MapPage} />
-            <Route exact path="/meetup" Component={MeetupPage} />
-          </div>
-        </BrowserRouter>
-      </div>
+      <BrowserRouter>
+        <div className="container">
+          <Nav />
+          <Route exact path="/" Component={Home} />
+          <Route exact path="/map" Component={MapPage} />
+          <Route exact path="/meetup" Component={MeetupPage} />
+        </div>
+      </BrowserRouter>
     );
   }
 }
