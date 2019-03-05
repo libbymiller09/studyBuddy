@@ -37,27 +37,3 @@ function mapStateToProps({ meetups }) {
 }
 
 export default connect(mapStateToProps, { fetchMeetups })(MeetupPage);
-
-// export default function MeetupPage(props) {
-//   return (
-//     <div>
-//       <section>
-//         <h3>Current Scheduled Meetups</h3>
-//         <div className="meetups-list">
-//           <li>
-//             Meetup list
-//           </li>
-//         </div>
-//       </section>
-
-//       <section>
-//         <header>
-//           <h3>Add your own meetup!</h3>
-//           </header>
-//           <form className="add-meetup-form">
-//             <AddMeetupForm />
-//           </form>
-//       </section>
-//     </div>
-//   );
-// }

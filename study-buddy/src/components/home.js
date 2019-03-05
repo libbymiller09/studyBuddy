@@ -3,28 +3,25 @@ import React from 'react';
 // import MeetupPage from './MeetupPage/meetupPage';
 
 // class Home extends React.Component {
-// const Home = () => {
-//   return (
-//     <div>
-//       <MeetupPage />
-//       <div className="meetupLink">
-//         <Link to="/meetups">
-//           <button className="meetupBtn">Meetups</button>
-//         </Link>
-//       </div>
-//     </div>
-//   );
-// };
-
-
-class Home extends React.Component {
-  render() {
-    return (
+  // render() {
+const Home = () => {
+  return (
+    <div className="landingContainer">
+      <header>
+        <h3>How to use this app!</h3>
+      </header>
       <div>
-        Landing
+        <h4>Finding people to study with is hard.</h4>
+        <p>With this application, find and connect with 'Study Buddies' near you!</p>
       </div>
-    );
-  }
+      <div>
+        <h3>Search the Map!</h3>
+        <h4>Check the map in your area.</h4>
+        <h4> Or search for specific meetups!</h4>
+      </div>
+      <h2>Look for a Buddy now!</h2>
+    </div>
+  );
 }
 
 export default Home;

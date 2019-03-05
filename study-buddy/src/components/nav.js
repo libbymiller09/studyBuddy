@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import Home from './home';
-import MapPage from './MapPage/mapPage';
-import MeetupPage from './MeetupPage/meetupPage';
+// import Home from './home';
+// import MapPage from './MapPage/mapPage';
+// import MeetupPage from './MeetupPage/meetupPage';
 
-// import './nav.css';
+import './nav.css';
 
 class Nav extends Component {
   renderContent() {
@@ -18,9 +18,9 @@ class Nav extends Component {
         );
       default:
         return [
-          <li key="3"><Home /></li>,
-          // <li key="4"><MapPage /></li>,
-          // <li key="2"><MeetupPage /></li>,
+          <li key="3"><Link to="/">Home</Link></li>,
+          <li key="4"><Link to="/map">Map</Link></li>,
+          <li key="2"><Link to="/meetups">Meetups</Link></li>,
           <li key="1"><a href="/api/logout">Logout</a></li>
         ];
     }
@@ -29,9 +29,9 @@ class Nav extends Component {
     return (
       <nav>
         <div>
-          <Link to={this.props.auth ? '/map' : '/'}
+          <Link to={this.props.auth ? '/' : '/'}
           >
-          Study Buddy
+          StudyBuddy
           </Link>
           <ul>
             {this.renderContent()}

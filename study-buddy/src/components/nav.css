@@ -1,0 +1,14 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+  display: inline;
+  text-decoration: none;
+  color: black;
+}
+
+div {
+  align-items: center;
+}
+
+li {
+  margin: 20px;
+}
