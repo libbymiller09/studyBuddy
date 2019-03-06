@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import { fetchMeetups } from '../../actions';
-// import AddMeetupForm from './add-meetup-form';
+import AddMeetupForm from './add-meetup-form';
 
 class MeetupPage extends Component {
   componentDidMount() {
@@ -17,6 +17,7 @@ class MeetupPage extends Component {
             <h4 className="time">Time: {meetup.time}</h4>
             <h4 className="place">Place: {meetup.place}</h4>
           </div>
+          <button className="check-toggle" type="button">Completed</button>
         </div>
       );
     });
@@ -26,7 +27,14 @@ class MeetupPage extends Component {
   render() {
     return (
       <div>
-        {this.renderMeetups()}
+        <h2>Current Scheduled Meetups</h2>
+        <div className="meetupListContainer">
+          {this.renderMeetups()}
+        </div>
+        <div className="meetupFormContainer">
+          <h2>Add your own meetup!</h2>
+          {/* {AddMeetupForm} */}
+        </div>
       </div>
     );
   }
