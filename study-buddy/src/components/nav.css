@@ -2,13 +2,37 @@
   font-family: 'Montserrat', sans-serif;
   display: inline;
   text-decoration: none;
-  color: black;
 }
 
-div {
+nav {
+  background-color: black;
+  padding: 20px;
+  margin: 0;
+  overflow: hidden;
+}
+
+nav div {
   align-items: center;
 }
 
-li {
-  margin: 20px;
+nav ul {
+  padding: 0;
+}
+
+nav li {
+  margin: 0;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 17px;
+}
+
+nav li a {
+  color: white;  
+  font-weight: bold;
+  padding: 20px;
+  display: inline-block;
+}
+
+nav li a:hover {
+  color: red;
 }

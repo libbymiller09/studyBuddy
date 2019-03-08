@@ -11,15 +11,15 @@ class Home extends React.Component {
           <h2>How to use this app!</h2>
         </header>
         <div>
-          <h4>Finding people to study with is hard.</h4>
-
+          <p>Finding people to study with is hard.</p>
+          
           <p>With this application, find and connect with 'Study Buddies' near you!</p>
         
           <h2>Search the Map!</h2>
 
-          <h4>Check the map in your area.</h4>
-
-          <h4> Or search for specific meetups!</h4>
+          <p>Check the map in your area.</p>
+          
+          <p>Or search for specific meetups!</p>
 
           <h2>Look for a Buddy now!</h2>
 

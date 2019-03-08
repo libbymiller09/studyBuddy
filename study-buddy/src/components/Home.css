@@ -1,3 +1,22 @@
 * {
   text-align: center;
 }
+
+.landingContainer {
+  padding: 20px;
+}
+
+header {
+  padding: 20px;
+  
+  /* margin: 0; */
+}
+
+h2 {
+  display: block;
+  width: 100%;
+}
+
+p {
+  /* margin-bottom: 100px; */
+}
