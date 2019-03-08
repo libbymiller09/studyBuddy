@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 // import { Link } from 'react-router-dom';
 import { fetchMeetups } from '../../actions';
-import AddMeetupForm from './add-meetup-form';
+import AddMeetupForm from './addMeetupForm';
 
 class MeetupPage extends Component {
   componentDidMount() {
