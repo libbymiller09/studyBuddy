@@ -1,3 +1,5 @@
-.mapComponent img {
-  width: 100%;
-}  
+.mapContainer {
+  top: 80px;
+  right: 0;
+
+}

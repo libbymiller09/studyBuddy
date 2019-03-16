@@ -1,5 +1,7 @@
 import React from 'react';
+import MapContainer from './MapContainer';
 import './MapPage.css';
+
 // import Map from './map.js';
 // import Modal from './modal';
 // import SearchResults from './search-results';
@@ -10,7 +12,7 @@ class MapPage extends React.Component {
     return (
       <div>
         <div className="mapComponent">
-         <img src="https://www.maptiler.com/img/map-home.svg" />
+         <MapContainer />
           <h2>Search the map!</h2>
           <form className="search-map-form">
             <div>
