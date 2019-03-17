@@ -4,6 +4,15 @@ import { reduxForm, Field } from 'redux-form';
 export class AddMeetupForm extends React.Component {
   onSubmit(values) {
     console.log(values);
+    return fetch('/meetups', {
+      method: 'POST',
+      body: JSON.stringify(values),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+    .then(response => console.log('Success'))
+    .catch(error => console.error('error'));
   }
 
   render() {
@@ -18,7 +27,14 @@ export class AddMeetupForm extends React.Component {
         <Field name="time" id="time" type="text" component="input" placeholder="3pm" />
         <label htmlFor="place">Place</label>
         <Field name="place" id="place" type="text" component="input" placeholder="Prince Coffee" />
-        <button type="submit">Add</button>
+        <button 
+          type="submit"
+          disabled={
+            this.props.pristine ||
+            this.props.submitting
+          }>
+          Add
+        </button>
       </form>
     );
   }
