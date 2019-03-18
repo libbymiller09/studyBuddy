@@ -29,6 +29,7 @@ export class AddMeetupForm extends React.Component {
         <Field name="place" id="place" type="text" component="input" placeholder="Prince Coffee" />
         <button 
           type="submit"
+          className="submitButton"
           disabled={
             this.props.pristine ||
             this.props.submitting

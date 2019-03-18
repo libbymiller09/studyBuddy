@@ -8,9 +8,4 @@ describe('<Nav />', () => {
   it('Renders without crashing', () => {
     shallow(<Nav />);
   });
-
-  // it('Renders the link tags initially', () => {
-  //   const wrapper = shallow(<Nav />);
-  //   expect(wrapper.contains(<li>{Link}</li>)).toEqual(true);
-  // });
 });

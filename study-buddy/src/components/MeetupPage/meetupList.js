@@ -13,8 +13,8 @@ class MeetupList extends Component {
         <div key={meetup._id} >
           <div className="meetupContent">
             <h3 className="subject">Subject: {meetup.subject}</h3>
-            <h4 className="time">Time: {meetup.time}</h4>
-            <h4 className="place">Place: {meetup.place}</h4>
+            <h3 className="time">Time: {meetup.time}</h3>
+            <h3 className="place">Place: {meetup.place}</h3>
           </div>
           <button className="check-toggle" type="button">Completed</button>
         </div>
