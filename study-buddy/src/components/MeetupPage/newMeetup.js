@@ -1,14 +1,23 @@
 import React, { Component } from 'react';
 import { reduxForm } from 'redux-form';
 import AddMeetupForm from './addMeetupForm';
+import AddMeetupFormReview from './addMeetupFormReview';
 
 class NewMeetup extends Component {
-  state = {};
+  state = { showFormReview: false };
 
   renderContent() {
+    if (this.state.showFormReview) {
+      return (
+        <AddMeetupFormReview
+          onCanel={() => this.setState({ showFormReview: false})}
+        />
+      );
+    }
+
     return (
       <AddMeetupForm 
-        onFormSubmit={() => this.setState({ })} 
+        onFormSubmit={() => this.setState({ showFormReview: true })} 
       />    
     );
   }

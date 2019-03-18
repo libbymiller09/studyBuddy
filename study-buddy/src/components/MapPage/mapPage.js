@@ -12,15 +12,15 @@ class MapPage extends React.Component {
     return (
       <div>
         <div className="mapComponent">
+        <h2>Search the map!</h2>
          <MapContainer />
-          <h2>Search the map!</h2>
-          <form className="search-map-form">
+          {/* <form className="search-map-form">
             <div>
               <label>Search</label>
               <input placeholder="North Portland" type="text" name="search" id="search" />
             </div>
-            <button type="submit">Go</button>
-          </form>
+            <button type="submit" className="submitButton">Go</button>
+          </form> */}
         </div>
       </div>
     );
