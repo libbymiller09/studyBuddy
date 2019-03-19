@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 import '../index.css';
+import '../float.grid.css';
 
 import Nav from './Nav';
 import Home from "./Home";

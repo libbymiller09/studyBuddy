@@ -4,12 +4,15 @@ import { reduxForm, Field } from 'redux-form';
 import { Link } from 'react-router-dom';
 import AddMeetupFormField from './addMeetupFormField'; 
 import formFields from './formFields';
+// import '../../float.grid.css';
+// import{ FormSubmit } from '../../actions';
+
 
 class AddMeetupForm extends Component {
   renderFields() {
     return _.map(formFields, ({ label, name }) => {
       return (
-        <Field key={name} component={AddMeetupFormField} type="text" label={label} name={name} />
+        <Field classname="formInputs" key={name} component={AddMeetupFormField} type="text" label={label} name={name} />
       );
     });
   }
@@ -17,7 +20,7 @@ class AddMeetupForm extends Component {
     return (
       <div>
         <form 
-          onSubmit={this.props.handleSubmit(this.props.onFormSubmit)}
+          // onSubmit={this.props.handleSubmit(this.props.onFormSubmit)}
         >
           {this.renderFields()}
           {/* <Link to="/meetups">

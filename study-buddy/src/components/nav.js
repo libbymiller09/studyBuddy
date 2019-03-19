@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import './nav.css';
+import '../float.grid.css';
 
 class Nav extends Component {
   renderContent() {
@@ -11,7 +12,7 @@ class Nav extends Component {
         return;
       case false:
         return (
-          <li><a href="/auth/google">Login with Google</a></li>
+          <li id="loginButton"><a href="/auth/google">Login with Google</a></li>
         );
       default:
         return [
@@ -25,15 +26,21 @@ class Nav extends Component {
   render() {
     return (
       <nav>
-        <div>
+        {/* <div className="authLink">
           <Link to={this.props.auth ? '/' : '/'}
           >
           StudyBuddy
-          </Link>
+          </Link> */}
           <ul>
+          <li className="authLink">
+            <Link to={this.props.auth ? '/' : '/'}
+            >
+              StudyBuddy
+            </Link>
+          </li>
             {this.renderContent()}
           </ul>
-        </div>
+        {/* </div> */}
       </nav>
     );
   }

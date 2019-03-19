@@ -2,6 +2,7 @@ import React from 'react';
 import MeetupList from './meetupList';
 import AddMeetupForm from './addMeetupForm';
 import './meetupPage.css';
+import '../../float.grid.css';
 
 const MeetupPage = () => {
   return (

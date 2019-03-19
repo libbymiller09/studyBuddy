@@ -8,15 +8,22 @@
 
 header {
   padding: 20px;
-  
-  /* margin: 0; */
+  color: #49274A;
 }
 
 h2 {
   display: block;
   width: 100%;
+  color: #49274A;
+}
+
+h3 {
+  display: block;
+  width: 100%;
+  color: #49274A;
 }
 
 p {
-  /* margin-bottom: 100px; */
+  color: #94618E;
+
 }

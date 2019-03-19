@@ -3,15 +3,15 @@ footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: #49274A;
+  color: #F4DECB;
   text-align: center;
 }
 
 footer a {
-  color: white;
+  color: #F4DECB;
 }
 
 footer a:hover {
-  color: red;
+  color: #94618E;
 }
