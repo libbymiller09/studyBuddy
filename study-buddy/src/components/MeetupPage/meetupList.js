@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMeetups } from '../../actions';
-// import AddMeetupForm from './addMeetupForm';
 
 class MeetupList extends Component {
   componentDidMount() {
@@ -21,7 +20,9 @@ class MeetupList extends Component {
       );
     });
   }
-    
+  componentDidUpdate() {
+    this.props.fetchMeetups();
+  }
 
   render() {
     return (
@@ -34,6 +35,7 @@ class MeetupList extends Component {
     );
   }
 }
+
 
 function mapStateToProps({ meetups }) {
   return { meetups };

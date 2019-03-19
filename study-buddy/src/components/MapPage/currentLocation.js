@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 const mapStyles = {
   map: {
     position: 'absolute',
-    // top: '30%',
     bottom: '8%',
     right: '25%',
     width: '50%',
@@ -131,3 +130,4 @@ CurrentLocation.defaultProps = {
   centerAroundCurrentLocation: false,
   visible: true
 };
+

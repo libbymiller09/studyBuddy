@@ -20,3 +20,9 @@ export const fetchMeetups = () => async dispatch => {
 
   dispatch({ type: FETCH_MEETUPS, payload: res.data });
 };
+
+// export const deleteMeetup = () => async dispatch => {
+//   const res = await axios.delete('/api/meetups/:id');
+
+//   dispatch({ type: })
+// }

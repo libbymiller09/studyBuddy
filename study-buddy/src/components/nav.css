@@ -5,7 +5,6 @@
 
 nav {
   background-color: #49274A;
-  /* padding: 20px; */
   margin: 0;
   overflow: hidden;
 }
@@ -22,7 +21,6 @@ nav ul {
 nav li {
   margin: 0;
   text-align: center;
-  /* padding: 14px 16px; */
   font-size: 17px;
   display: inline;
 }
@@ -32,7 +30,6 @@ nav li a {
   font-weight: bold;
   padding-left: 20px;
   padding-right: 20px;
-  /* display: inline-block; */
 }
 
 nav li a:hover {
