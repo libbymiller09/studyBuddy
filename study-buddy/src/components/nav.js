@@ -17,7 +17,7 @@ class Nav extends Component {
       default:
         return [
           <li key="1"><Link to="/">Home</Link></li>,
-          <li key="2"><Link to="/map">Map</Link></li>,
+          // <li key="2"><Link to="/map">Map</Link></li>,
           <li key="3"><Link to="/meetups">Meetups</Link></li>,
           <li key="4"><a href="/api/logout">Logout</a></li>
         ];

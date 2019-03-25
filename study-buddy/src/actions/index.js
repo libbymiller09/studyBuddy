@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { FETCH_USER } from './types';
+import { FETCH_USER, DELETE_MEETUP } from './types';
 import { FETCH_MEETUPS } from './types';
 
 export const fetchUser = () => async dispatch => {
@@ -21,8 +21,8 @@ export const fetchMeetups = () => async dispatch => {
   dispatch({ type: FETCH_MEETUPS, payload: res.data });
 };
 
-// export const deleteMeetup = () => async dispatch => {
-//   const res = await axios.delete('/api/meetups/:id');
+export const deleteMeetup = () => async dispatch => {
+  const res = await axios.delete('/api/meetups/:id');
 
-//   dispatch({ type: })
-// }
+  dispatch({ type: DELETE_MEETUP, payload: res.data });
+}

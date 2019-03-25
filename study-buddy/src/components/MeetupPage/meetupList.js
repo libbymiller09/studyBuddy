@@ -1,11 +1,19 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchMeetups } from '../../actions';
+import { deleteMeetup } from '../../actions';
 
 class MeetupList extends Component {
   componentDidMount() {
     this.props.fetchMeetups();
   }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.meetups !== this.props.meetups) {
+      this.props.fetchMeetups();
+    }
+  }
+
   renderMeetups() {
     return this.props.meetups.reverse().map(meetup => {
       return (
@@ -15,14 +23,12 @@ class MeetupList extends Component {
             <h3 className="time">Time: {meetup.time}</h3>
             <h3 className="place">Place: {meetup.place}</h3>
           </div>
-          <button className="check-toggle" type="button">Completed</button>
+          <button onClick={() => { completedButton(meetup._id) }} className="check-toggle" type="button">Completed</button>
         </div>
       );
     });
   }
-  componentDidUpdate() {
-    this.props.fetchMeetups();
-  }
+
 
   render() {
     return (
@@ -36,6 +42,13 @@ class MeetupList extends Component {
   }
 }
 
+function completedButton(id) {
+  fetch('/api/meetups/' + id, {
+    method: "DELETE",
+  })
+  // deleteMeetup(id);
+  console.log('completed');
+}
 
 function mapStateToProps({ meetups }) {
   return { meetups };

@@ -19,17 +19,21 @@ class Home extends React.Component {
         
           <h3> You can... </h3>
 
-          <h2>Checkout the Map!</h2>
+          {/* <h2>Checkout the Map!</h2>
 
-          <p>  See if there are any peers meeting in your area! Meetups are shown with handy markers. </p>
+          <p>  See if there are any peers meeting in your area! Meetups are shown with handy markers. </p> */}
 
-          <h2> Or checkout the listed meetups!</h2> 
+          <h2> Checkout the listed meetups!</h2> 
           
-          <p> To find or host study sessions!</p>
+          <p> To find study sessions in your area!</p>
+
+          <h2> Or create your own custom meetup! </h2>
+
+          <p> Select your own time, place, and subject you want to study. </p>
 
           <h2>Look for a Buddy now!</h2>
 
-          <p> Start by clicking the login button!   Then click Map or Meetups.</p>
+          <p> Start by clicking the login button!  Then head over to Meetups.</p>
 
         </div>
       </div>
