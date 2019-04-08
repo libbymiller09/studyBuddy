@@ -4,12 +4,18 @@ import { fetchMeetups } from '../../actions';
 import { deleteMeetup } from '../../actions';
 
 class MeetupList extends Component {
+  constructor(props) {
+    super(props);
+    console.log(this.props)
+  }
+
   componentDidMount() {
     this.props.fetchMeetups();
   }
 
   componentDidUpdate(prevProps) {
     if (prevProps.meetups !== this.props.meetups) {
+    // if (prevProps.meetups[0]._id !== this.props.meetups[0]._id) {
       this.props.fetchMeetups();
     }
   }

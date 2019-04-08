@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import ResponsiveMenu from 'react-responsive-navbar';
 
 import './nav.css';
 import '../float.grid.css';
@@ -26,20 +27,30 @@ class Nav extends Component {
   render() {
     return (
       <nav>
+        <ResponsiveMenu 
+          menuOpenButton={<div><i class="fas fa-bars"></i></div>}
+          menuCloseButton={<div><i class="fas fa-times"></i></div>}
+          changeMenuOn="500px"
+          largeMenuClassName="large-menu-className"
+          smallMenuClassName="small-menu-className"
+          menu={
+            <ul>
+            <li className="authLink">
+              <Link to={this.props.auth ? '/' : '/'}
+              >
+                StudyBuddy
+              </Link>
+            </li>
+              {this.renderContent()}
+          </ul>
+          }
+        />
         {/* <div className="authLink">
           <Link to={this.props.auth ? '/' : '/'}
           >
           StudyBuddy
           </Link> */}
-          <ul>
-          <li className="authLink">
-            <Link to={this.props.auth ? '/' : '/'}
-            >
-              StudyBuddy
-            </Link>
-          </li>
-            {this.renderContent()}
-          </ul>
+          
         {/* </div> */}
       </nav>
     );

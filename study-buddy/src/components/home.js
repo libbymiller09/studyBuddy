@@ -35,6 +35,14 @@ class Home extends React.Component {
 
           <p> Start by clicking the login button!  Then head over to Meetups.</p>
 
+          <h2> Don't have a google account yet? </h2>
+
+          <p> No problem, use this demo account to try out the app! </p> 
+
+          <h4>Username: demoTesting2019000@gmail.com</h4>  
+          <h4>Password: DemoTester</h4>
+        
+
         </div>
       </div>
     );

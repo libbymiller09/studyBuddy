@@ -43,3 +43,27 @@ nav li a:active {
 .authLink a {
   color: #F8EEE7;
 }
+
+@media (max-width: 500px) {
+  .small-menu-className {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .small-menu-className i {
+    color: white;
+    padding: 5px;
+  }
+
+  .small-menu-className a {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .small-menu-className li {
+    display: block;
+    margin-left: 0;
+    padding: 5px 0;
+  }
+}
+

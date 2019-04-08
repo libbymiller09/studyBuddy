@@ -1,50 +1,5 @@
-// import _ from 'lodash';
-// import React, { Component } from 'react';
-// import { reduxForm, Field } from 'redux-form';
-// import { Link } from 'react-router-dom';
-// import AddMeetupFormField from './addMeetupFormField'; 
-// import formFields from './formFields';
-// // import '../../float.grid.css';
-// // import{ FormSubmit } from '../../actions';
-
-
-// class AddMeetupForm extends Component {
-//   renderFields() {
-//     return _.map(formFields, ({ label, name }) => {
-//       return (
-//         <Field classname="formInputs" key={name} component={AddMeetupFormField} type="text" label={label} name={name} />
-//       );
-//     });
-//   }
-//   render() {
-//     return (
-//       <div>
-//         <form 
-//           // onSubmit={this.props.handleSubmit(this.props.onFormSubmit)}
-//         >
-//           {this.renderFields()}
-//           {/* <Link to="/meetups">
-//             Cancel
-//           </Link> */}
-//           <button type="submit">
-//             Next
-//           </button>
-//         </form>
-//       </div>
-//     );
-//   }
-// }
-
-// export default reduxForm({
-//   form: 'addMeetupForm',
-//   destroyOnUnmount: false
-// })(AddMeetupForm);
-
-
-
 import React from 'react';
 import { reduxForm, Field } from 'redux-form';
-// import Input from './input';
 
 export class AddMeetupForm extends React.Component {
   onSubmit(values) {

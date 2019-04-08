@@ -10,6 +10,8 @@ import Home from "./Home";
 import MapPage from './MapPage/mapPage';
 import MeetupPage from './MeetupPage/meetupPage';
 import Footer from './Footer';
+import { deleteMeetup } from '../actions';
+import DeleteMeetup from './MeetupPage/deleteMeetup';
 
 class App extends Component {
   componentDidMount() {
@@ -24,6 +26,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route exact path="/map" component={MapPage} />
             <Route path="/meetups" component={MeetupPage} />
+            <Route path="/meetups/:id" component={deleteMeetup} />
             <Footer />
           </div>
         </BrowserRouter>
